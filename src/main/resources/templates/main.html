@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--조회하기 누르면 api의 정보 조회, 자기가 보고싶은 시군구 선택하기-->
+<form method="post" name="/get_list">
+    <label>
+        <select>
+            <option>시</option>
+            <option>군</option>
+            <option>구</option>
+        </select>
+    </label>
+    <input type="text" name="page">
+    <input type="text" name="perPage">
+    <button onclick="">조회하기</button>
+</form>
+<div> 데이터가 나오는 곳 </div>
+</body>
+</html>
+<script>
+    const btn = document.querySelector('button');
+    btn.onclick = () =>{
+        fetch("/main")
+            .then((response) => {
+                console.log("버튼 클릭")
+                return response.json();
+            })
+    }
+</script>
