@@ -1,4 +1,4 @@
-package com.testapi.config;
+package com.testapi.batch;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

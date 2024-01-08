@@ -1,0 +1,19 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mappers.MainMapper">
+
+    <insert id="get_list" parameterType="com.testapi.dto.MainDTO">
+       insert into `data` (name, address, count) values (#{name}, #{address}, #{count})
+    </insert>
+
+    <select id="select" parameterType="" resultType="">
+        select * from `data`
+    </select>
+
+    <update id="update" parameterType="">
+
+    </update>
+
+</mapper>
+
